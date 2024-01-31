@@ -8,14 +8,20 @@ ini_set("display_errors", "On");
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Kontaktbgit branch -M mainuch</title>
+   <title>Kontaktbuch</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+   <!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>-->
+   
    <?php
    include "styles.php";
    ?>
 </head>
+
 <body>
 
    <div class="menubar">
@@ -37,8 +43,6 @@ ini_set("display_errors", "On");
    <div class="content">
 
       <?php
-   
-      // Variablen
       $headline = 'Herzlich willkommen!';
       $contacts = [];
       $deletedcontacts =[];
@@ -60,25 +64,9 @@ ini_set("display_errors", "On");
          file_put_contents('contacts.txt', json_encode($contacts, JSON_PRETTY_PRINT));
       }
 
-      //Headinngs
-
-      if($_GET['page'] == 'delete') {
-         $headline = 'Kontakt gelöscht';
-      };
-      if($_GET['page'] == 'contacts') {
-         $headline = "Deine Kontakten";
-      };
-      if($_GET['page'] == 'addcontacts') {
-         $headline = "Kontakten hinzufügen";
-      };
-      if($_GET['page'] == 'legal') {
-         $headline = "Impressum nach §5 des Gesetzes";
-      }
-      echo '<h1> ' . $headline . '</h1>';
-
+      include 'headings.php';
 
       //Content for each page
-
       if($_GET['page'] == 'delete') {
          echo '<p>Dein Kontakt wurde gelöscht</p>';
          $index = $_GET['delete'];
@@ -111,24 +99,8 @@ ini_set("display_errors", "On");
          ";
       };
 
-      if ($_GET['page'] == 'addcontacts') {
-         echo "
-         <div>
-            Hier kannst du Kontakten hinzufügen.
-         </div>
-         <form action='?page=contacts' method='POST'>
-            <div>
-               <input placeholder='Name eingeben' name='name'>
-            </div>
-            <divt>
-               <input placeholder='Telefonnummer eingeben' name='phone'>
-            </divt>
-            <div>
-               <button type='submit'>Ansender</button>
-            </div>
-         </form>
-         ";
-      };
+      // Form for inputs
+      include 'add_contact_form.php';
 
       if($_GET['page']== 'start') {
          echo '<p>Hier ist die start Seite.</p>';
@@ -138,7 +110,8 @@ ini_set("display_errors", "On");
 </div>
 
 <div class="footer">
-   (C) Kontakt Book 2024
+   (C) My Contact Book 2024 
+
 </div>
 
 </body>

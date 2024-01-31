@@ -1,15 +1,9 @@
 <style>
-      .footer {
-         padding: 10px;
-         text-align: center;
-         background-color: #111;
-         color: white;
-         margin-top: 50px;
-      }
 
       body {
          font-family: 'Montserrat', sans-serif;
          background-color: #DCDCDC;
+         /*background-image: url('img/background_pattern.jpg');*/
          margin: 0;
       }
 
@@ -19,7 +13,8 @@
       
       .menu {
          width: 20%;
-         background-color:  #D8BFD8;
+         //background: rgb(238,174,202);
+         background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
          margin-right: 30px;
          padding-top: 150px;
          height: 100vh;
@@ -34,12 +29,12 @@
          align-items: center;
       }
 
-      .menu img {
-         margin-right: 10px;
-      }
-
       .menu a:hover {
          background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .menu img {
+         margin-right: 10px;
       }
 
       .myname {
@@ -65,7 +60,10 @@
          width: 80%;
          margin-top: 120px;
          margin-right: 32px;
-         background-color: white;
+         //background-color: white;
+         background: rgb(238,174,202);
+         background: rgb(238,174,202);
+         background: linear-gradient(256deg, rgba(238,174,202,1) 1%, rgba(11,2,2,0) 70%);
          padding: 10px;
          border-radius: 5px;
          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
@@ -78,7 +76,7 @@
          left: 0;
          top: 0;
          height: 80px;
-         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+         box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
          padding-left: 30px;
          display: flex;
          justify-content: space-between;
@@ -129,6 +127,25 @@
          color: white;
          padding: 2px;
          text-decoration: none;
+      }
+
+      .footer {
+         padding: 10px;
+         text-align: center;
+         background: rgb(238,174,202);
+         background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+         color: white;
+         margin-top: 50px;
+      }
+
+      .contribiton-list {
+         margin-top: 3%;
+         text-decoration: none;
+      }
+
+      .contribitons {
+         text-decoration: none;
+         color: white;
       }
 
    </style>
