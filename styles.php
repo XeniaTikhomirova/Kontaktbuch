@@ -21,7 +21,6 @@
       }
 
       .menu a {
-         display: block;
          text-decoration: none;
          color: #FFFFFF;
          padding: 7px;
@@ -42,6 +41,10 @@
          justify-content: center;
          align-items: center;
          margin-right: 10px;
+      }
+
+      .my-contact-book {
+         margin-bottom: 30px;
       }
 
       .avatar {
@@ -75,7 +78,7 @@
          right: 0;
          left: 0;
          top: 0;
-         height: 80px;
+         height: 100px;
          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
          padding-left: 30px;
          display: flex;
@@ -131,6 +134,10 @@
 
       .deletebtn:hover {
          background-color: #EFE5EF;
+      }
+
+      .form_submit {
+         display: block;
       }
 
       .footer {
