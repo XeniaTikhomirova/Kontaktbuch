@@ -113,7 +113,7 @@
          text-decoration: none;
       }
 
-      .callphone:hover {
+      .phonebtn:hover {
          background-color: #EFE5EF;
       }
 
@@ -127,6 +127,10 @@
          color: white;
          padding: 2px;
          text-decoration: none;
+      }
+
+      .deletebtn:hover {
+         background-color: #EFE5EF;
       }
 
       .footer {

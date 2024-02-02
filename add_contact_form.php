@@ -1,10 +1,14 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", "On");
+
       if ($_GET['page'] == 'addcontacts') {
          echo "
          <div>
             Hier kannst du Kontakten hinzufügen.
          </div>
-         <form action='?page=contacts' method='POST'>
+
+         <form method='POST'>
             <div>
                <input placeholder='Name eingeben' name='name'>
             </div>
@@ -15,6 +19,7 @@
                <button type='submit'>Ansender</button>
             </div>
          </form>
+
          ";
       };
 
